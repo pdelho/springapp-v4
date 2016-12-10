@@ -1,3 +1,5 @@
+<%@ include file="/WEB-INF/views/include.jsp"%>
+
 <html>
 <head>
 <title>Hello :: Spring Application</title>
@@ -20,7 +22,10 @@
 </head>
 <body>
 	<h1>Hello - Spring Application</h1>
-	<p>Greetings.</p>
+	<p>
+		Greetings, it is now
+		<c:out value="${now}" />
+	</p>
 
 	<div id="calc">
 		Number: <input type="text" id="n1">
@@ -30,6 +35,9 @@
 		</button>
 	</div>
 
-	<footer> I'm Pablo </footer>
+	<footer>
+		I'm Pablo <a href="https://pdelho-springv4.herokuapp.com/">Heroku</a>
+
+	</footer>
 </body>
 </html>
