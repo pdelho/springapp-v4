@@ -3,21 +3,8 @@
 <html>
 <head>
 <title>Hello :: Spring Application</title>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-<script type="text/javascript">
-	$(function() {
-		$("#n1").on("click", function() {
-			$("#n1").val("");
-		});
-
-		$("#b1").on("click", function() {
-			var num = $("#n1");
-			num.val(num.val() * num.val());
-		});
-	});
-</script>
+<script src="<c:url value="/resources/js/calculadora.js" />"></script>
 
 </head>
 <body>
@@ -36,8 +23,8 @@
 	</div>
 
 	<footer>
-		I'm Pablo <a href="https://pdelho-springv4.herokuapp.com/">Heroku</a>
-
+		I'm <a href="https://pdelho-springv4.herokuapp.com/">Pablo in
+			Heroku</a>
 	</footer>
 </body>
 </html>
