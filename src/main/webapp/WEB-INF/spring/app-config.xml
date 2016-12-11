@@ -44,14 +44,16 @@
          <property name="price" value="22.79"/>
        </bean>
 
-       <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
-         <property name="basename" value="messages"/>
-       </bean>
+       
        
        <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
          <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
          <property name="prefix" value="/WEB-INF/views/"></property>
          <property name="suffix" value=".jsp"></property>        
+       </bean>
+       
+       <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+         <property name="basename" value="messages"/>
        </bean>
 
 </beans>

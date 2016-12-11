@@ -1,4 +1,5 @@
 /target/
-
+/src/test/resources/jdbc.properties
+/src/main/webapp/WEB-INF/classes/jdbc.properties
 *.lnk
 Procfile
