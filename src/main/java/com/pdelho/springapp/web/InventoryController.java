@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 import com.pdelho.springapp.service.ProductManager;
 
-@Controller("/Product")
+@Controller
 public class InventoryController {
 
     protected final Log logger = LogFactory.getLog(getClass());
