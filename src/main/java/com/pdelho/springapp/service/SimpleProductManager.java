@@ -2,29 +2,37 @@ package com.pdelho.springapp.service;
 
 import java.util.List;
 
-import com.pdelho.springapp.domain.Product;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+import com.pdelho.springapp.domain.Product;
+import com.pdelho.springapp.repository.ProductDao;
+
+@Component
 public class SimpleProductManager implements ProductManager {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private List<Product> products;
+    @Autowired
+    private ProductDao productDao;
 
-	public List<Product> getProducts() {
-		return products; 
-	}
+    public void setProductDao(ProductDao productDao) {
+        this.productDao = productDao;
+    }
 
-	public void increasePrice(int percentage) {
-		if (products != null) {
-			for (Product product : products) {
-				double newPrice = product.getPrice().doubleValue() * 
-						(100 + percentage)/100;
-				product.setPrice(newPrice);
-			}
-		}  
-	}
+    public List<Product> getProducts() {
+        return productDao.getProductList();
+    }
 
-	public void setProducts(List<Product> products) {
-		this.products = products;
-	}
+    public void increasePrice(int percentage) {
+        List<Product> products = productDao.getProductList();
+        if (products != null) {
+            for (Product product : products) {
+                double newPrice = product.getPrice().doubleValue() * 
+                                    (100 + percentage)/100;
+                product.setPrice(newPrice);
+                productDao.saveProduct(product);
+            }
+        }
+    }
 }
