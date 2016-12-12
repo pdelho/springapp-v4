@@ -48,11 +48,11 @@ html, body {
 		<li> These are the coordinates of some famous locations </li>		
 	</ul>
 	<ol>
-		<li> London.  Lat: 51.510357, Lon: -0.116773</li>
-		<li> Berlin.  Lat: 52.516266, Lon: 13.377775</li>
-		<li> Hamburg.  Lat: 53.5502, Lon: 9.9922</li>
-		<li> New York.  Lat: 40.711667, Lon: -74.0125</li>
-		<li> Beijing.  Lat: 39.913818, Lon: 116.363625	</li>
+		<li> London.  Lon: -0.116773, Lat: 51.510357 </li>
+		<li> Berlin.  Lon: 13.377775, Lat: 52.516266 </li>
+		<li> Hamburg. Lon: 9.9922, Lat: 53.5502 </li>
+		<li> New York. Lon: -74.0125, Lat: 40.711667</li>
+		<li> Beijing.  Lon: 116.363625, Lat: 39.913818	</li>
 	</ol>
 	
 	
