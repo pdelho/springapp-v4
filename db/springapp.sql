@@ -1,13 +1,13 @@
-CREATE DATABASE springapp;
-
-GRANT ALL ON springapp.* TO springappuser@'%' IDENTIFIED BY 'pspringappuser';
-GRANT ALL ON springapp.* TO springappuser@localhost IDENTIFIED BY 'pspringappuser';
-
-USE springapp;
-
-CREATE TABLE products (
-  id INTEGER PRIMARY KEY,
-  description varchar(255),
-  price decimal(15,2)
+﻿
+CREATE TABLE public.product
+(
+  id integer NOT NULL,
+  description text,
+  price real,
+  CONSTRAINT springapp_pkey PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
 );
-CREATE INDEX products_description ON products(description);
+ALTER TABLE public.product
+  OWNER TO postgres;
